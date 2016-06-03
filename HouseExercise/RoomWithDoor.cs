@@ -21,5 +21,13 @@ namespace HouseExercise
         {
             doorDescription = doorDesc;
         }
+
+        public override string Description
+        {
+            get
+            {
+                return $"{base.Description}.  You see {DoorDescription}.";
+            }
+        }
     }
 }
