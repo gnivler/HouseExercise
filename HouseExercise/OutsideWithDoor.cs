@@ -8,7 +8,7 @@ namespace HouseExercise
 {
     class OutsideWithDoor : Outside, IHasExteriorDoor
     {
-        public string DoorLocation { get; set; }
+        public Location DoorLocation { get; set; }
         private string doorDescription;
         public string DoorDescription
         {
@@ -17,9 +17,18 @@ namespace HouseExercise
                 return doorDescription;
             }
         }
-        public OutsideWithDoor(string name, bool hot, string description) : base(name, hot)
+        public OutsideWithDoor(string name, bool hot, string doorDesc, Location doorLoc) : base(name, hot)
         {
-            doorDescription = description;
+            doorDescription = doorDesc;
+            DoorLocation = doorLoc;
+        }
+
+        public override string Description
+        {
+            get
+            {
+                return $"{base.Description} You see {DoorDescription}.";
+            }
         }
     }
 }

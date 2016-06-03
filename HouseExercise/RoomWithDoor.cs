@@ -8,7 +8,7 @@ namespace HouseExercise
 {
     class RoomWithDoor : Room, IHasExteriorDoor
     {
-        public string DoorLocation { get; set; }
+        public Location DoorLocation { get; set; }
         private string doorDescription;
         public string DoorDescription
         {
@@ -17,9 +17,10 @@ namespace HouseExercise
                 return doorDescription;
             }
         }
-        public RoomWithDoor(string name, string decoration, string description) : base(name, decoration)
+        public RoomWithDoor(string name, string decoration, string doorDesc, Location doorLoc) : base(name, decoration)
         {
-            doorDescription = description;
+            doorDescription = doorDesc;
+            DoorLocation = doorLoc;
         }
     }
 }
