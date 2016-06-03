@@ -25,7 +25,6 @@ namespace HouseExercise
 
         private void exits_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void goThroughTheDoor_Click(object sender, EventArgs e)
@@ -39,17 +38,15 @@ namespace HouseExercise
             currentLocation = newRoom;
             exits.Items.Clear();
             foreach (var exit in currentLocation.Exits)
-            {
-                exits.Items.Add(exit);
-            }
+                exits.Items.Add(exit.Name);
             exits.SelectedIndex = 0;
             description.Text = currentLocation.Description;
             if (currentLocation is IHasExteriorDoor)
                 goThroughTheDoor.Visible = true;
             else
                 goThroughTheDoor.Visible = false;
-
         }
+
         public Form1()
         {
             InitializeComponent();
@@ -59,29 +56,24 @@ namespace HouseExercise
 
         private void CreateObjects()
         {
-            livingRoom = new RoomWithDoor("Living Room", "an antique carpet", "an oak door with a brass knob", frontYard);
+            livingRoom = new RoomWithDoor("living room", "an antique carpet", "an oak door with a brass knob");
+            kitchen = new RoomWithDoor("kitchen", "stainless steel appliances", "a screen door");
+            diningRoom = new Room("dining room", "a crystal chandelier");
+            backYard = new OutsideWithDoor("back yard", true, "a screen door");
+            frontYard = new OutsideWithDoor("front yard", false, "an oak door with a brass knob");
+            garden = new Outside("garden", false);
+
             livingRoom.Exits = new Location[] { diningRoom };
-
-            kitchen = new RoomWithDoor("Kitchen", "stainless steel appliances", "a screen door", backYard);
             kitchen.Exits = new Location[] { diningRoom };
-
-            diningRoom = new Room("Dining Room", "a crystal chandelier");
             diningRoom.Exits = new Location[] { kitchen, livingRoom };
-
-            backYard = new OutsideWithDoor("Back Yard", true, "a screen door", kitchen);
             backYard.Exits = new Location[] { frontYard, garden };
-
-            frontYard = new OutsideWithDoor("Front Yard", false, "an oak door with a brass knob", livingRoom);
             frontYard.Exits = new Location[] { backYard, garden };
-
-            garden = new Outside("Garden", false);
             garden.Exits = new Location[] { frontYard, backYard };
 
             kitchen.DoorLocation = backYard;
             livingRoom.DoorLocation = frontYard;
             frontYard.DoorLocation = livingRoom;
             backYard.DoorLocation = kitchen;
-
         }
     }
 }

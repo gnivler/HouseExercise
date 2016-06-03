@@ -21,7 +21,7 @@ namespace HouseExercise
                 string description = base.Description;
                 if (hot)
                 {
-                    description += $"\rIt's very hot here";
+                    description += $"  It's very hot here";
                 }
                 return description;
             }

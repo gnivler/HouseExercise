@@ -28,20 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.description = new System.Windows.Forms.ListBox();
             this.goThroughTheDoor = new System.Windows.Forms.Button();
             this.goHere = new System.Windows.Forms.Button();
             this.exits = new System.Windows.Forms.ComboBox();
+            this.description = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // description
-            // 
-            this.description.FormattingEnabled = true;
-            this.description.Location = new System.Drawing.Point(4, 6);
-            this.description.Name = "description";
-            this.description.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.description.Size = new System.Drawing.Size(276, 186);
-            this.description.TabIndex = 0;
             // 
             // goThroughTheDoor
             // 
@@ -75,15 +66,24 @@
             this.exits.TabIndex = 3;
             this.exits.SelectedIndexChanged += new System.EventHandler(this.exits_SelectedIndexChanged);
             // 
+            // description
+            // 
+            this.description.Dock = System.Windows.Forms.DockStyle.Top;
+            this.description.Location = new System.Drawing.Point(0, 0);
+            this.description.Multiline = true;
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(284, 192);
+            this.description.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 255);
+            this.Controls.Add(this.description);
             this.Controls.Add(this.exits);
             this.Controls.Add(this.goHere);
             this.Controls.Add(this.goThroughTheDoor);
-            this.Controls.Add(this.description);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -93,15 +93,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Explore the house";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox description;
         private System.Windows.Forms.Button goThroughTheDoor;
         private System.Windows.Forms.Button goHere;
         private System.Windows.Forms.ComboBox exits;
+        private System.Windows.Forms.TextBox description;
     }
 }
 

@@ -17,10 +17,9 @@ namespace HouseExercise
                 return doorDescription;
             }
         }
-        public RoomWithDoor(string name, string decoration, string doorDesc, Location doorLoc) : base(name, decoration)
+        public RoomWithDoor(string name, string decoration, string doorDesc) : base(name, decoration)
         {
             doorDescription = doorDesc;
-            DoorLocation = doorLoc;
         }
     }
 }

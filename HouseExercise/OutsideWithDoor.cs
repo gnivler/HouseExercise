@@ -17,17 +17,16 @@ namespace HouseExercise
                 return doorDescription;
             }
         }
-        public OutsideWithDoor(string name, bool hot, string doorDesc, Location doorLoc) : base(name, hot)
+        public OutsideWithDoor(string name, bool hot, string doorDesc) : base(name, hot)
         {
             doorDescription = doorDesc;
-            DoorLocation = doorLoc;
         }
 
         public override string Description
         {
             get
             {
-                return $"{base.Description} You see {DoorDescription}.";
+                return $"{base.Description}.  You see {DoorDescription}.";
             }
         }
     }

@@ -17,7 +17,7 @@ namespace HouseExercise
         {
             get
             {
-                return $"{base.Description}\rYou see {decoration}.";
+                return $"{base.Description}  You see {decoration}.";
             }
         }  
     }
