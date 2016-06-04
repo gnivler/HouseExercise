@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HouseExercise
 {
@@ -17,6 +18,11 @@ namespace HouseExercise
             random = new Random();
         }
 
+        public Location GetLoc()
+        {
+            return myLocation;
+        }
+
         public void Move()
         {
             if (myLocation is IHasExteriorDoor)
@@ -26,13 +32,18 @@ namespace HouseExercise
                     {
                         IHasExteriorDoor door = myLocation as IHasExteriorDoor;
                         myLocation = door.DoorLocation;
+                        //MessageBox.Show($"I'm in {myLocation.Name}\n");
                     }
                 }
-                // choose a location from available exits and keep moving until there is a hiding space
-                myLocation = myLocation.Exits[random.Next(myLocation.Exits.Length)];
-                while (myLocation is IHidingPlace == false)
-                    myLocation = myLocation.Exits[random.Next(myLocation.Exits.Length)];
+
             }
+            // choose a location from available exits and keep moving until there is a hiding space
+            myLocation = myLocation.Exits[random.Next(myLocation.Exits.Length)];
+            //MessageBox.Show($"I'm in {myLocation.Name}\n");
+            while (myLocation is IHidingPlace == false)
+                myLocation = myLocation.Exits[random.Next(myLocation.Exits.Length)];
+            //MessageBox.Show($"I'm in {myLocation.Name}\n");
+
         }
 
         public bool Check(Location location)

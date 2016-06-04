@@ -45,6 +45,7 @@
             this.goThroughTheDoor.TabIndex = 1;
             this.goThroughTheDoor.Text = "Go through the door";
             this.goThroughTheDoor.UseVisualStyleBackColor = true;
+            this.goThroughTheDoor.Visible = false;
             this.goThroughTheDoor.Click += new System.EventHandler(this.goThroughTheDoor_Click);
             // 
             // goHere
@@ -56,6 +57,7 @@
             this.goHere.TabIndex = 2;
             this.goHere.Text = "Go here:";
             this.goHere.UseVisualStyleBackColor = true;
+            this.goHere.Visible = false;
             this.goHere.Click += new System.EventHandler(this.goHere_Click);
             // 
             // exits
@@ -69,6 +71,7 @@
             this.exits.Name = "exits";
             this.exits.Size = new System.Drawing.Size(248, 24);
             this.exits.TabIndex = 3;
+            this.exits.Visible = false;
             this.exits.SelectedIndexChanged += new System.EventHandler(this.exits_SelectedIndexChanged);
             // 
             // description
@@ -89,6 +92,7 @@
             this.check.TabIndex = 5;
             this.check.Text = "check";
             this.check.UseVisualStyleBackColor = true;
+            this.check.Visible = false;
             this.check.Click += new System.EventHandler(this.check_Click);
             // 
             // goHide

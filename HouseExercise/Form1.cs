@@ -45,7 +45,7 @@ namespace HouseExercise
         {
             InitializeComponent();
             CreateObjects();
-            MoveToANewLocation(kitchen);
+            //MoveToANewLocation(kitchen);
         }
 
 
@@ -62,6 +62,9 @@ namespace HouseExercise
             {
                 opponent.Move();
             }
+            goHere.Visible = true;
+            exits.Visible = true;
+            goHide.Visible = false;
         }
 
         private Location currentLocation;
@@ -74,7 +77,6 @@ namespace HouseExercise
 
         private void CreateObjects()
         {
-            opponent = new Opponent(livingRoom);
             livingRoom = new RoomWithDoor("living room", "an antique carpet", "an oak door with a brass knob", "a closet");
             kitchen = new RoomWithDoor("kitchen", "stainless steel appliances", "a screen door", "a cabinet");
             diningRoom = new Room("dining room", "a crystal chandelier");
@@ -87,6 +89,7 @@ namespace HouseExercise
             bathroom = new RoomWithHidingPlace("bathroom", "a sink and a toilet", "the shower");
             garden = new OutsideWithHidingPlace("garden", false, "the shed");
             driveway = new OutsideWithHidingPlace("driveway", false, "the garage");
+            opponent = new Opponent(livingRoom);
 
             livingRoom.Exits = new Location[] { diningRoom };
             kitchen.Exits = new Location[] { diningRoom };
