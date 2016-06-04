@@ -15,7 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="HouseExercise.OutsideWithDoor">
-    <Position X="4" Y="5.75" Width="1.5" />
+    <Position X="4" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAEAAAABCAAAAAAAAAAAAAAA=</HashCode>
       <FileName>OutsideWithDoor.cs</FileName>
@@ -37,10 +37,26 @@
     </TypeIdentifier>
   </Class>
   <Class Name="HouseExercise.RoomWithDoor">
-    <Position X="8" Y="5.75" Width="1.5" />
+    <Position X="8" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAABCAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAEAAAABCAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RoomWithDoor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HouseExercise.OutsideWithHidingPlace">
+    <Position X="4" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>OutsideWithHidingPlace.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HouseExercise.RoomWithHidingPlace">
+    <Position X="7.75" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>RoomWithHidingPlace.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -49,6 +65,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAACAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IHasExteriorDoor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="HouseExercise.IHidingPlace">
+    <Position X="6" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>IHidingPlace.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

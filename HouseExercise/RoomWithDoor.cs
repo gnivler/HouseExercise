@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HouseExercise
 {
-    class RoomWithDoor : Room, IHasExteriorDoor
+    class RoomWithDoor : RoomWithHidingPlace, IHasExteriorDoor
     {
         public Location DoorLocation { get; set; }
         private string doorDescription;
@@ -17,7 +17,7 @@ namespace HouseExercise
                 return doorDescription;
             }
         }
-        public RoomWithDoor(string name, string decoration, string doorDesc) : base(name, decoration)
+        public RoomWithDoor(string name, string decoration, string doorDesc, string hidingPlace) : base(name, decoration, hidingPlace)
         {
             doorDescription = doorDesc;
         }
