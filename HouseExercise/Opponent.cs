@@ -18,32 +18,26 @@ namespace HouseExercise
             random = new Random();
         }
 
-        public Location GetLoc()
-        {
-            return myLocation;
-        }
-
         public void Move()
         {
             if (myLocation is IHasExteriorDoor)
             {
-                if (random.Next(2) == 1)        // coin flip to go through the door or not
+                int num = random.Next(2);
+                if (num == 1)        // coin flip to go through the door or not
                 {
-                    {
-                        IHasExteriorDoor door = myLocation as IHasExteriorDoor;
-                        myLocation = door.DoorLocation;
-                        //MessageBox.Show($"I'm in {myLocation.Name}\n");
-                    }
+                    // downcast myLocation to an interface reference to get at the DoorLocation property
+                    IHasExteriorDoor door = myLocation as IHasExteriorDoor;
+                    myLocation = door.DoorLocation;
                 }
-
             }
             // choose a location from available exits and keep moving until there is a hiding space
-            myLocation = myLocation.Exits[random.Next(myLocation.Exits.Length)];
-            //MessageBox.Show($"I'm in {myLocation.Name}\n");
-            while (myLocation is IHidingPlace == false)
-                myLocation = myLocation.Exits[random.Next(myLocation.Exits.Length)];
-            //MessageBox.Show($"I'm in {myLocation.Name}\n");
-
+            //myLocation = myLocation.Exits[random.Next(myLocation.Exits.Length)];
+            do
+            {
+                int num = random.Next((myLocation.Exits.Length));
+                myLocation = myLocation.Exits[num];
+            }
+            while (myLocation is IHidingPlace == false);
         }
 
         public bool Check(Location location)

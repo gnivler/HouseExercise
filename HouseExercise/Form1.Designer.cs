@@ -39,7 +39,7 @@
             // goThroughTheDoor
             // 
             this.goThroughTheDoor.Location = new System.Drawing.Point(5, 230);
-            this.goThroughTheDoor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.goThroughTheDoor.Margin = new System.Windows.Forms.Padding(4);
             this.goThroughTheDoor.Name = "goThroughTheDoor";
             this.goThroughTheDoor.Size = new System.Drawing.Size(368, 28);
             this.goThroughTheDoor.TabIndex = 1;
@@ -51,7 +51,7 @@
             // goHere
             // 
             this.goHere.Location = new System.Drawing.Point(5, 194);
-            this.goHere.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.goHere.Margin = new System.Windows.Forms.Padding(4);
             this.goHere.Name = "goHere";
             this.goHere.Size = new System.Drawing.Size(100, 28);
             this.goHere.TabIndex = 2;
@@ -67,7 +67,7 @@
             this.exits.Items.AddRange(new object[] {
             "kitchen"});
             this.exits.Location = new System.Drawing.Point(125, 197);
-            this.exits.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exits.Margin = new System.Windows.Forms.Padding(4);
             this.exits.Name = "exits";
             this.exits.Size = new System.Drawing.Size(248, 24);
             this.exits.TabIndex = 3;
@@ -77,8 +77,9 @@
             // description
             // 
             this.description.Dock = System.Windows.Forms.DockStyle.Top;
+            this.description.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.description.Location = new System.Drawing.Point(0, 0);
-            this.description.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.description.Margin = new System.Windows.Forms.Padding(4);
             this.description.Multiline = true;
             this.description.Name = "description";
             this.description.Size = new System.Drawing.Size(379, 186);
@@ -118,7 +119,7 @@
             this.Controls.Add(this.goHere);
             this.Controls.Add(this.goThroughTheDoor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";

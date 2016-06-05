@@ -9,5 +9,6 @@ namespace HouseExercise
     interface IHidingPlace
     {
         string HidingPlace { get; }
+        bool Checked { get; set; }
     }
 }

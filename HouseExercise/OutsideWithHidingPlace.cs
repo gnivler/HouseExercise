@@ -16,10 +16,19 @@ namespace HouseExercise
                 return hidingPlace;
             }
         }
+        public bool Checked { get; set; }
 
         public OutsideWithHidingPlace(string name, bool hot, string hidingPlace) : base (name, hot) 
         {
             this.hidingPlace = hidingPlace;
+        }
+
+        public override string Description
+        {
+            get
+            {
+                return $"{base.Description}  Someone could hide {HidingPlace}.";
+            }
         }
 
     }
